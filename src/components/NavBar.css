@@ -1,0 +1,18 @@
+.nav{
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    background-color: palevioletred;
+}
+
+h1{
+    color: white;
+    font-weight: bold;
+    font-style: oblique;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
