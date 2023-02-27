@@ -1,8 +1,9 @@
 import React from 'react'
+import './CartWidget.css';
 
 const CartWidget = () => {
   return (
-    <div>
+    <div className='carrito'>
         <span className='material-symbols-outlined'>
         shopping_cart
         </span>
