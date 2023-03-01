@@ -1,20 +1,33 @@
 import React from 'react'
 import { useState } from 'react';
 
-const ItemCount = (stock) => {
-    const [cantidad, setCantidad] = useState(1);
-  console.log(cantidad);
+const ItemCount = ({stock}) => {
+    const [contador, setContador] = useState(1);
+
+    const stockMin = () => {
+      if (contador<=1) {
+        setContador(1);}
+      else {
+        setContador(contador-1);}
+      };
+
+    const stockMax = () => {
+      if (contador>=stock) {
+        setContador(stock);}
+      else {
+        setContador(contador+1);}
+      };
+
 
   return (<>
    <h1>Producto 1</h1>
-      <p>{cantidad}</p>
+      <p>{contador}</p>
   
-        <button onClick={() => setCantidad(cantidad + 1)
-        }>Agregar</button>
-        <button onClick={() => setCantidad(cantidad - 1)}>Quitar</button>
-        <button onClick={() => setCantidad(1)}>Reset</button>
+        <button onClick={() => stockMax()}>Agregar</button>
+        <button onClick={() => stockMin()}>Quitar</button>
+        <button onClick={() => setContador(1)}>Reset</button>
   </>
-  )
+  ) 
 }
 
 export default ItemCount
