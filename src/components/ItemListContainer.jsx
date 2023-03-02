@@ -1,12 +1,12 @@
-import React from 'react'
-import ItemCount from './ItemCount';
+import React, { useState, useEffect } from 'react'
 import './ItemListContainer.css';
-import data from "../data.json";
 import ItemList from './ItemList';
+import data from "../data.json";
 
 const ItemListContainer =  ({greeting}) => {
+    const [items, setItems]=useState([])
     
-    const getDatos =(data) => {
+    const getDatos = () => {
         return new Promise((resolve,reject) => {
             if(data.length === 0){ 
                 reject(new Error ("No hay datos"));}
@@ -20,22 +20,25 @@ const ItemListContainer =  ({greeting}) => {
     async function fetchingData() {
         try {
             const datosFetched = await getDatos();
+            setItems(datosFetched)
         }
         catch (error) {
             console.log(error);
         }
     }
 
+    useEffect(()=>{
         fetchingData();
+    },[])
 
-    return (
-        <>
+return (
+    <>
         <div className='saludo'>{greeting}</div>
-        <ItemCount stock={10}/>
-        <ItemList data={data}/>
-        </>
-    )
+        <ItemList data={items}/>
+    </>
+)
 }
+    
 
 
 export default ItemListContainer;
