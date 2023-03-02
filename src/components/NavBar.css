@@ -28,3 +28,14 @@
     justify-content: center;
     padding-top: 5px;
 }
+
+.section-topbar {
+    background-color: #dfdd6c;
+    color: #fff;
+    fill: #fff;
+}
+
+.section-topbar {
+    padding: 4px 0;
+    line-height: 20px;
+}

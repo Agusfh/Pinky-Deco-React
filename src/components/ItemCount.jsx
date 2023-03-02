@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
+import Data from "../data.json";
 
 const ItemCount = ({stock}) => {
     const [contador, setContador] = useState(1);
