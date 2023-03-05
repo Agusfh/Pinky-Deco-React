@@ -10,6 +10,7 @@ const ItemList = ({data}) => {
             key={data.id}
             id={data.id}
             nombre={data.nombre}
+            
             precio={data.precio}
             stock={data.stock}
             />

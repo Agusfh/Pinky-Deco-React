@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
 import Data from "../data.json";
+import "./Item.css";
 
 const ItemCount = ({stock}) => {
     const [contador, setContador] = useState(1);
@@ -21,12 +22,12 @@ const ItemCount = ({stock}) => {
 
 
   return (<>
-   <h1>Producto 1</h1>
-      <p>{contador}</p>
-  
-        <button onClick={() => stockMax()}>Agregar</button>
-        <button onClick={() => stockMin()}>Quitar</button>
+      <div className='añadir'>
+      <button onClick={() => stockMax()}>+</button>
+      <p className='num'>{contador}</p> 
+        <button onClick={() => stockMin()}>-</button>
         <button onClick={() => setContador(1)}>Reset</button>
+    </div>
   </>
   ) 
 }

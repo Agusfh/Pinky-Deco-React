@@ -1,24 +1,28 @@
 [
     {"id":1,
     "nombre": "Vela Plantas",
+    
     "precio":   "1100",
     "stock":    "10",
     "categoria": "Deco"
 },
     {"id":2,
     "nombre": "Cuadro Enjoy",
+
     "precio": "650",
     "stock": "5",
     "categoria": "Deco"
 },
     {"id":3,
     "nombre": "Almohadon Luna",
+    
     "precio": "1500",
     "stock": "3",
     "categoria": "Deco"
 },
     {"id":4,
-    "nombre": "Pack posavasos x4",
+    "nombre": "Pack Posavasos x4",
+    
     "precio": "500",
     "stock": "10",
     "categoria": "Cocina"

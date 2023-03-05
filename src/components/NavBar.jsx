@@ -24,6 +24,7 @@ function NavBar() {
     <Navbar expand="lg" className='barra'>
         
       <Container>
+        
       <Navbar.Brand href="#home">
             <img
               alt=""
@@ -32,22 +33,13 @@ function NavBar() {
               height="30"
               className="d-inline-block align-top"
             />{' '}
-            Pinky Deco
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
+          <Navbar.Brand href="#home">Pinky Deco</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="#home">Deco</Nav.Link>
-            <Nav.Link href="#link">Cocina</Nav.Link>
-            <NavDropdown title="Bazar" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Botellas</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Mates
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Tazas</NavDropdown.Item>
-            </NavDropdown>
+            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link href="#features">Features</Nav.Link>
+            <Nav.Link href="#pricing">Pricing</Nav.Link>
           </Nav>
-        </Navbar.Collapse>
         <div id='carro'>
         <CartWidget/> 
       </div>

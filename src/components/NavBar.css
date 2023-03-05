@@ -39,3 +39,8 @@
     padding: 4px 0;
     line-height: 20px;
 }
+
+.collapse{
+    display: flex;
+    width: 100%;
+}
