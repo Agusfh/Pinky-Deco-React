@@ -1,7 +1,7 @@
 [
     {"id":1,
     "nombre": "Vela Plantas",
-    
+    "foto": "https://www.freepik.es/vector-gratis/flor-rosa-roja_13446428.htm#query=rosa&position=0&from_view=keyword&track=sph",
     "precio":   "1100",
     "stock":    "10",
     "categoria": "Deco"

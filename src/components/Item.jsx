@@ -7,13 +7,13 @@ import './Item.css';
 import { Container } from 'react-bootstrap';
 
 
-const Item = ({id,nombre,precio,stock}) => {
+const Item = ({id,nombre,precio,stock,foto}) => {
     return (
       <Container fluid className='contain'>
       <Card className='cards' style={{ width: '18rem' }}>
       <Card.Body>
         <h1>{nombre}</h1>
-        <Card.Img variant="top" src="holder.js/100px180" />
+        <Card.Img variant="top" src={foto} />
         <Card.Text>
         Id: {id} <br></br>
         Precio: {precio} <br></br>

@@ -4,7 +4,6 @@ import './NavBar.css';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import logo from '../assets/logo.jpg';
 import { border } from '@chakra-ui/react';
 
@@ -28,17 +27,18 @@ function NavBar() {
       <Navbar.Brand href="#home">
             <img
               alt=""
-              src= {logo}
-              width="30"
-              height="30"
+              src= {logo} 
+              width="55"
+              height="55"
               className="d-inline-block align-top"
             />{' '}
           </Navbar.Brand>
-          <Navbar.Brand href="#home">Pinky Deco</Navbar.Brand>
+          <Navbar.Brand href="#home" className='text'>Pinky Deco</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
+            <Nav.Link href="#bazar">Bazar</Nav.Link>
+            <Nav.Link href="#deco">Deco</Nav.Link>
+            <Nav.Link href="#mates">Mates</Nav.Link>
+            <Nav.Link href="#nosotros">Nosotros</Nav.Link>
           </Nav>
         <div id='carro'>
         <CartWidget/> 

@@ -11,6 +11,9 @@
     justify-content: right;
 }
 
+.text{
+    padding-right: 255px;
+}
 .menu{
     display: flex;
     justify-content: space-around;
