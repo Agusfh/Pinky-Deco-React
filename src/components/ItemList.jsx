@@ -4,7 +4,13 @@ import Item from './Item';
 const ItemList = ({data}) => {
 
     return (
-        <div>
+        <div
+ style={{
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        flexWrap: 'wrap',
+      }}>
         {data?.map((data) => (
             <Item
             key={data.id}
@@ -18,5 +24,4 @@ const ItemList = ({data}) => {
     </div>
     );
 };
-
-export default ItemList
+export default ItemList;

@@ -20,30 +20,33 @@ function NavBar() {
                 </div>
             </div>
             
-    <Navbar expand="lg" className='barra'>
-        
+            <Navbar collapseOnSelect expand="lg" className='barra'>
       <Container>
-        
-      <Navbar.Brand href="#home">
-            <img
+        <div className='logotipo'>
+        <Navbar.Brand>
+      <img
               alt=""
-              src= {logo} 
-              width="55"
-              height="55"
+              src= {logo}
+              width="30"
+              height="30"
               className="d-inline-block align-top"
-            />{' '}
-          </Navbar.Brand>
-          <Navbar.Brand href="#home" className='text'>Pinky Deco</Navbar.Brand>
+            />{' '}</Navbar.Brand>
+         <Navbar.Brand>Pinky Deco</Navbar.Brand>
+
+        </div>
+      
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#bazar">Bazar</Nav.Link>
-            <Nav.Link href="#deco">Deco</Nav.Link>
-            <Nav.Link href="#mates">Mates</Nav.Link>
-            <Nav.Link href="#nosotros">Nosotros</Nav.Link>
+            <Nav.Link href="#features">Home</Nav.Link>
+            <Nav.Link href="#pricing">Features</Nav.Link>
+            <Nav.Link href="#action/3.1">Pricing</Nav.Link>
           </Nav>
-        <div id='carro'>
+        </Navbar.Collapse>
+      </Container>
+      <div id='carro' className='carro'>
         <CartWidget/> 
       </div>
-      </Container>
     </Navbar>
     </>
   );

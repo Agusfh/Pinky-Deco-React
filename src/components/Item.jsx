@@ -4,16 +4,15 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import ItemCount from './ItemCount';
 import './Item.css';
-import { Container } from 'react-bootstrap';
 
 
-const Item = ({id,nombre,precio,stock,foto}) => {
+
+const Item = ({id,nombre,precio,stock}) => {
     return (
-      <Container fluid className='contain'>
-      <Card className='cards' style={{ width: '18rem' }}>
+          <Card className='cards' style={{ width: '18rem' }}>
       <Card.Body>
         <h1>{nombre}</h1>
-        <Card.Img variant="top" src={foto} />
+        <Card.Img variant="top" src="holder.js/100px180" />
         <Card.Text>
         Id: {id} <br></br>
         Precio: {precio} <br></br>
@@ -23,8 +22,7 @@ const Item = ({id,nombre,precio,stock,foto}) => {
         <Button className='buy'>Comprar</Button>
       </Card.Body>
     </Card>
-    </Container>
     )
 }
 
-export default Item
+export default Item;
