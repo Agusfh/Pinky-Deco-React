@@ -4,24 +4,18 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import ItemCount from './ItemCount';
 import './Item.css';
+import ItemDetail from './ItemDetail';
 
 
-
-const Item = ({id,nombre,precio,stock}) => {
+const Item = () => {
     return (
-          <Card className='cards' style={{ width: '18rem' }}>
-      <Card.Body>
-        <h1>{nombre}</h1>
-        <Card.Img variant="top" src="holder.js/100px180" />
-        <Card.Text>
-        Id: {id} <br></br>
-        Precio: {precio} <br></br>
-        stock: {stock} <br></br>
-        </Card.Text>
-        <ItemCount stock={stock}/>
-        <Button className='buy'>Comprar</Button>
+      <Card className='cards' style={{ width: '18rem' }}>
+    <Card.Body>
+      <h1>{nombre}</h1>
+      <Card.Img variant="top" src="holder.js/100px180" />
+      <button>detalle</button>
       </Card.Body>
-    </Card>
+      </Card>
     )
 }
 

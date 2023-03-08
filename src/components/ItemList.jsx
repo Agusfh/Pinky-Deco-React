@@ -1,5 +1,6 @@
 import React from 'react'
 import Item from './Item';
+import ItemDetail from './ItemDetail';
 
 const ItemList = ({data}) => {
 
@@ -12,7 +13,7 @@ const ItemList = ({data}) => {
         flexWrap: 'wrap',
       }}>
         {data?.map((data) => (
-            <Item
+            <ItemDetail
             key={data.id}
             id={data.id}
             nombre={data.nombre}
