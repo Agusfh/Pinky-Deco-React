@@ -1,15 +1,16 @@
 import React from 'react'
-import data from "../data.json";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import ItemCount from './ItemCount';
+import maceta from '../assets/maceta.png'
 
-const ItemDetail = ({id,nombre,precio,stock}) => {
+const ItemDetail = ({producto}) => {
+  const {id,nombre,precio,stock} = producto
     return (
         <Card className='cards' style={{ width: '18rem' }}>
     <Card.Body>
       <h1>{nombre}</h1>
-      <Card.Img variant="top" src="holder.js/100px180" />
+      <Card.Img variant="top" src={maceta} />
       <Card.Text>
       Id: {id} <br></br>
       Precio: {precio} <br></br>
@@ -21,5 +22,6 @@ const ItemDetail = ({id,nombre,precio,stock}) => {
   </Card>
   )
 }
+
 
 export default ItemDetail

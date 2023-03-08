@@ -2,10 +2,11 @@ import React, { useState, useEffect } from 'react'
 import './ItemListContainer.css';
 import ItemList from './ItemList';
 import data from "../data.json";
+import { useParams } from 'react-router-dom';
 
 const ItemListContainer =  ({greeting}) => {
     const [items, setItems]=useState([])
-    
+    const {id}=useParams()
     const getDatos = () => {
         return new Promise((resolve,reject) => {
             if(data.length === 0){ 
@@ -20,7 +21,11 @@ const ItemListContainer =  ({greeting}) => {
     async function fetchingData() {
         try {
             const datosFetched = await getDatos();
-            setItems(datosFetched)
+            if(id){
+                setItems(datosFetched.filter((item)=> item.categoria === id))
+            }else{
+                setItems(datosFetched)
+            }
         }
         catch (error) {
             console.log(error);
@@ -29,16 +34,13 @@ const ItemListContainer =  ({greeting}) => {
 
     useEffect(()=>{
         fetchingData();
-    },[])
+    },[id])
 
 return (
     <>
         <div className='saludo'>{greeting}</div>
         <ItemList data={items}/>
     </>
-)
-}
+)}      
     
-
-
-export default ItemListContainer;
+    export default ItemListContainer;

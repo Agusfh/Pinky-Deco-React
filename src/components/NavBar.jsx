@@ -6,6 +6,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import logo from '../assets/logo.jpg';
+import { NavLink } from 'react-router-dom';
 
 function NavBar() {
   return (
@@ -22,7 +23,7 @@ function NavBar() {
 
 <Navbar collapseOnSelect expand="lg" className='barra'>
       <Container>
-      <Navbar.Brand>
+      <Navbar.Brand as={NavLink} to='/'>
       <img
               alt=""
               src= {logo}
@@ -31,12 +32,13 @@ function NavBar() {
               className="d-inline-block align-top"
             />{' '}
           Pinky Deco</Navbar.Brand>
+
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#bazar">Bazar</Nav.Link>
-            <Nav.Link href="#deco">Deco</Nav.Link>
-            <Nav.Link href="#mates">Mates</Nav.Link>
+            <Nav.Link as={NavLink}to="/category/Cocina">Cocina</Nav.Link>
+            <Nav.Link as={NavLink}to="/category/Deco">Deco</Nav.Link>
+            <Nav.Link as={NavLink}to="/category/Mates">Mates</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
