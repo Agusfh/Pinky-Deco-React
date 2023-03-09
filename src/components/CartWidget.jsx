@@ -4,8 +4,8 @@ import './CartWidget.css';
 const CartWidget = () => {
   return (
     <div className='carrito'>
-        <span className='material-symbols-outlined'>
-        
+        <span class="material-symbols-outlined">
+        shopping_cart
         </span>
         <span>4</span>
     </div>
