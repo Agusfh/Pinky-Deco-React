@@ -2,10 +2,12 @@ import React from 'react'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import ItemCount from './ItemCount';
-import maceta from '../assets/maceta.png'
+import maceta from '../assets/maceta.png';
+
 
 const ItemDetail = ({producto}) => {
-  const {id,nombre,precio,stock} = producto
+  const {id,nombre,precio,stock} = producto;
+
     return (
         <Card className='cards' style={{ width: '18rem' }}>
     <Card.Body>
