@@ -19,7 +19,7 @@ const App = () => {
       <NavBar/>
       <Routes>
         <Route path='/' element={ <ItemListContainer greeting={"¡Bienvenidos a Pinky Deco Store!"}/>} />
-        <Route path='/category/:id' element={ <ItemListContainer greeting={"¡Bienvenidos a Pinky Deco Store!"}/>} />
+        <Route path='/category/:id' element={ <ItemListContainer />} />
         <Route path='/item/:id' element={ <ItemDetailContainer />} />
       </Routes>
     </BrowserRouter>

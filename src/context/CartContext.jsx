@@ -12,11 +12,15 @@ const CartContext = ({children}) => {
 
   }
 
+  console.log(cart)
+
   return (
   <CartContexto.Provider value={{cart,setCart,addItem}}> 
   {children} 
   </CartContexto.Provider>
+
   )
-};
+
+}
 
 export default CartContext;
