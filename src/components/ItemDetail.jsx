@@ -4,13 +4,13 @@ import Card from 'react-bootstrap/Card';
 import ItemCount from './ItemCount';
 import maceta from '../assets/maceta.png';
 import {useContext} from 'react';
-import {CartContext} from '../context/CartContext';
+import {CartContexto} from '../context/CartContext';
 
 
 const ItemDetail = ({producto}) => {
   const {id,nombre,precio,stock} = producto;
 
-  const {addItem}=useContext(CartContext)
+  const {addItem}=useContext(CartContexto)
 
   const onAdd = (cantidad)=>{
     addItem(producto, cantidad)
@@ -27,10 +27,9 @@ const ItemDetail = ({producto}) => {
       stock: {stock} <br></br>
       </Card.Text>
       <ItemCount stock={stock}onAdd={onAdd}/>
-    </Card.Body>
+      </Card.Body>
   </Card>
   )
 }
 
-
-export default ItemDetail
+export default ItemDetail
