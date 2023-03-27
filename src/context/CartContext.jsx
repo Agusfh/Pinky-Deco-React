@@ -6,9 +6,14 @@ const CartContext = ({children}) => {
 
   const [cart, setCart] = useState([]);
 
+  const addItem= (item, cantidad) => {
+    
+    setCart([...cart,   {...item,cantidad}])
+
+  }
 
   return (
-  <CartContexto.Provider value={{cart,setCart}}> 
+  <CartContexto.Provider value={{cart,setCart,addItem}}> 
   {children} 
   </CartContexto.Provider>
   )

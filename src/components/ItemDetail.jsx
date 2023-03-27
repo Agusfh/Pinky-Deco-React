@@ -3,10 +3,18 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import ItemCount from './ItemCount';
 import maceta from '../assets/maceta.png';
+import {useContext} from 'react';
+import {CartContext} from '../context/CartContext';
 
 
 const ItemDetail = ({producto}) => {
   const {id,nombre,precio,stock} = producto;
+
+  const {addItem}=useContext(CartContext)
+
+  const onAdd = (cantidad)=>{
+    addItem(producto, cantidad)
+    } 
 
     return (
         <Card className='cards' style={{ width: '18rem' }}>
@@ -18,8 +26,7 @@ const ItemDetail = ({producto}) => {
       Precio: {precio} <br></br>
       stock: {stock} <br></br>
       </Card.Text>
-      <ItemCount stock={stock}/>
-      <Button className='buy'>Comprar</Button>
+      <ItemCount stock={stock}onAdd={onAdd}/>
     </Card.Body>
   </Card>
   )

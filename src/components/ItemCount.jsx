@@ -28,6 +28,7 @@ const ItemCount = ({stock}) => {
         <button onClick={() => stockMin()}>-</button>
         <button onClick={() => setContador(1)}>Reset</button>
     </div>
+    <Button className='buy' onClick={()=>onAdd(contador)}>Comprar</Button>
   </>
   ) 
 }
