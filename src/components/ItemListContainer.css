@@ -7,8 +7,8 @@
     padding: 30px;
 }
 
-container{
-    width: 50px important;
+.container{
+    width: 1200px !important; 
 }
 
 h2{
@@ -18,5 +18,5 @@ h2{
     color: pink;
     height: 130px;
     padding-top: 50px;
-width: 100%;
+    width: 100%;
 }

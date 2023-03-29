@@ -18,9 +18,7 @@ const ItemListContainer =  ({greeting}) => {
             if(data.length === 0){ 
                 reject(new Error ("No hay datos"));}
         
-            setTimeout(() => {
-                resolve(data)
-            }, 2000);
+          resolve(data);
         });
     };
 
@@ -41,6 +39,7 @@ const ItemListContainer =  ({greeting}) => {
     useEffect(()=>{
         fetchingData();
     },[id])
+
 
 return (
     <>
@@ -73,7 +72,7 @@ return (
     </Carousel>
 </Container>
 
-<h2> Nuestros Productos </h2>
+<h2> Nuestros Productos </h2> 
         <ItemList data={items}/>
     </>
 )}      
