@@ -1,8 +1,10 @@
 import React from 'react'
+import { useContext } from "react";
+import { CartContexto } from '../context/CartContext';
 
 
 const Cart = () => {
-  const { cart } = useContext(CartContext);
+  const { cart } = useContext(CartContexto);
 
   if (cart.length === 0) {
     return (
