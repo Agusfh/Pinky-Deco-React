@@ -6,14 +6,15 @@ import { CartContexto } from '../context/CartContext';
 
 
 const CartWidget = ({}) => {
-  const { cart } = useContext(CartContexto);
+  const { cart, shoppingCart} = useContext(CartContexto);
   return (
     <div className='carrito'>
         <span class="material-symbols-outlined" as={NavLink} to='/Cart'>
         shopping_cart
         </span>
+        <span>{shoppingCart()}</span>
     </div>
   );
 };
 
-export default CartWidget
+export default CartWidget;

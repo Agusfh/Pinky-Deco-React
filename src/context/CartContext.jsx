@@ -20,7 +20,11 @@ const CartContext = ({children}) => {
     return cart.reduce((acc, prod) => (acc += parseInt(prod.precio) * prod.cantidad), 0);
   };
 
-  const removeItem = (itemId) => { setCart(cart.filter((prod) => prod.id !== id));
+  const removeItem = (itemId) => { setCart(cart.filter((prod) => prod.id !==itemId));};
+
+
+  const shoppingCart = () => {
+    return cart.reduce((acc, prod) => (acc += parseInt(prod.cantidad)), 0);
   };
 
   return (
@@ -30,7 +34,8 @@ const CartContext = ({children}) => {
       addItem, 
       clear,
       removeItem,
-      cartTotal
+      cartTotal,
+      shoppingCart
       }}> 
   
     {children} 

@@ -4,6 +4,8 @@ import { CartContexto } from '../context/CartContext';
 import Item from './Item';
 import { Link } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
+import Table from 'react-bootstrap/Table';
+import { Container } from 'react-bootstrap';
 
 
 const Cart = () => {
@@ -23,14 +25,37 @@ const Cart = () => {
   }
 
   return (
+    
     <div className="main_cart">
+
+<Table striped bordered hover size="sm">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Producto</th>
+          <th>Precio</th>
+          <th>Cantidad</th>
+          <th>Eliminar</th>
+        </tr>
+      </thead>
+      </Table>
+
      {cart.map((compra) => (
     <div key={compra.id}>
-      <p>{compra.nombre}</p>
-      <p>{compra.precio}</p>
-      <p>{compra.cantidad}</p>
 
-      <Button onClick={() => removeItem(item.id)}> X </Button>
+<Table striped bordered hover size="sm">
+      
+      <tbody>
+        <tr>
+          <td>{compra.id}</td>
+          <td>{compra.nombre}</td>
+          <td>{compra.precio}</td>
+          <td>{compra.cantidad}</td>
+          <td><Button onClick={() => removeItem(compra.id)}> 🗑️ </Button></td>
+        </tr>
+      </tbody>
+    </Table>
+
     </div>
     
   ))}
