@@ -7,7 +7,7 @@ import Button from 'react-bootstrap/Button';
 
 
 const Cart = () => {
-  const { cart, cartTotal, clear } = useContext(CartContexto);
+  const { cart, cartTotal, removeItem} = useContext(CartContexto);
 
   if (cart.length === 0) {
     return (
@@ -22,18 +22,21 @@ const Cart = () => {
     );
   }
 
-  {cart.map((compra) => (
-    <CartItem key={Item.id} compra={Item} />
-  ))}
-  <span>Total a pagar : ${cartTotal()}</span>
-
-  
-
   return (
     <div className="main_cart">
-      {console.log(cart)}
+     {cart.map((compra) => (
+    <div key={compra.id}>
+      <p>{compra.nombre}</p>
+      <p>{compra.precio}</p>
+      <p>{compra.cantidad}</p>
+
+      <Button onClick={() => removeItem(item.id)}> X </Button>
+    </div>
+    
+  ))}
+  <span>Total a pagar : ${cartTotal()}</span>
     </div>
   );
 };
 
-export default Cart
+export default Cart;
