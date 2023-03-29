@@ -44,6 +44,7 @@ function NavBar() {
       </Container>
       <div id='carro' className='carro'>
       <NavLink to='/cart'> <CartWidget/> </NavLink>
+      
       </div>
     </Navbar>
     </>
