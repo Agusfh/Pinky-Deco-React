@@ -9,6 +9,8 @@ import banner2 from '../assets/banner2.png';
 import banner3 from '../assets/banner3.png';
 import { Container } from 'react-bootstrap';
 
+//*Traigo la información desde mi JSON de productos, los divido por categoria y los muestro en el ItemListContainer*//
+
 const ItemListContainer =  ({greeting}) => {
 
     const [items, setItems]=useState([])
@@ -40,12 +42,15 @@ const ItemListContainer =  ({greeting}) => {
         fetchingData();
     },[id])
 
+     //*Muestro el carousel solo en la página principal usando el window*//
 
 return (
     <>
-        <div className='saludo'>{greeting}</div>
+      <div className='saludo'>{greeting}</div>
 
-<Container>
+      {(window.location.pathname === "/") &&
+
+    <Container>
         <Carousel>
       <Carousel.Item>
         <img
@@ -70,7 +75,7 @@ return (
         />
       </Carousel.Item>
     </Carousel>
-</Container>
+</Container> }
 
 <h2> Nuestros Productos </h2> 
         <ItemList data={items}/>
