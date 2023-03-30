@@ -1,7 +1,6 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card';
 import ItemCount from './ItemCount';
-import maceta from '../assets/maceta.png';
 import {useContext, userState, useEffect} from 'react';
 import {CartContexto} from '../context/CartContext';
 

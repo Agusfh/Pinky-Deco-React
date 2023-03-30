@@ -1,0 +1,56 @@
+.info{
+    display: flex;
+    background-color: palevioletred;
+    width: 100%;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.redes{
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.contacto{
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.pagos{
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.redes i{
+    color: black;
+    letter-spacing: 10px;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 30px;
+}
+
+p{
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.pago{
+    padding: 10px;
+    margin-top: 5px;
+}
+
+h4{
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 5px;
+}

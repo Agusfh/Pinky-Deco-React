@@ -28,26 +28,22 @@ const Cart = () => {
     
     <div className="main_cart">
 
+
+     {cart.map((compra) => (
+    <div key={compra.id}>
+
 <Table striped bordered hover size="sm">
       <thead>
         <tr>
-          <th>ID</th>
           <th>Producto</th>
           <th>Precio</th>
           <th>Cantidad</th>
           <th>Eliminar</th>
         </tr>
       </thead>
-      </Table>
 
-     {cart.map((compra) => (
-    <div key={compra.id}>
-
-<Table striped bordered hover size="sm">
-      
       <tbody>
         <tr>
-          <td>{compra.id}</td>
           <td>{compra.nombre}</td>
           <td>{compra.precio}</td>
           <td>{compra.cantidad}</td>

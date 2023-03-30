@@ -16,9 +16,10 @@ style={{
           key={data.id}
           id={data.id}
           nombre={data.nombre}
-          foto={data.foto}
+          foto={data.img}
           precio={data.precio}
           stock={data.stock}
+          categoria={data.categoria}
           />
   ))}   
   </div>
