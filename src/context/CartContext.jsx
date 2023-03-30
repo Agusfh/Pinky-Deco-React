@@ -39,6 +39,9 @@ const CartContext = ({children}) => {
         ...doc.data(),
         id: doc.id,
       }));
+
+      
+
       setProducts(docs);
     });
   }, []);

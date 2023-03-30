@@ -22,7 +22,7 @@ const ItemListContainer =  ({greeting}) => {
 
           const getData = async () => {
           
-          const itemCollection= !categoriaId? collection(db, "decoracion") : query(collection(db, "decoracion"),
+          const itemCollection= !id? collection(db, "decoracion") : query(collection(db, "decoracion"),
           where("categoria", "==", id));
           const response = await getDocs(itemCollection);
 
@@ -33,9 +33,11 @@ const ItemListContainer =  ({greeting}) => {
 
       return newProduct;
             });
-            
+
         };
-// llamamos a la función
+
+        setProducts(products);
+
         getData(); 
       }, [id])
 
@@ -86,7 +88,7 @@ return (
         </div>
       ))}
     </div>
-        <ItemList data={data}/>
+        <ItemList data={products}/>
     </>
 )}      
     
