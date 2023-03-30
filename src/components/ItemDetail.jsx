@@ -18,7 +18,7 @@ const ItemDetail = ({producto}) => {
     return (
         <Card className='cards' style={{ width: '18rem' }}>
     <Card.Body>
-      <h1>{nombre}</h1>
+      <h3>{nombre}</h3>
       <Card.Img variant="top" src={img} />
       <Card.Text>
       Precio: $ {precio} <br></br>

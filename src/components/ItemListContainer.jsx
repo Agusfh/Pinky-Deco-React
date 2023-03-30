@@ -47,7 +47,7 @@ const ItemListContainer = ({ greeting }) => {
 
       {(window.location.pathname === "/") &&
 
-<Container>
+<Container className='caro'>
   <Carousel>
     <Carousel.Item>
       <img
@@ -74,7 +74,7 @@ const ItemListContainer = ({ greeting }) => {
   </Carousel>
 </Container>}
 
-<h2> Nuestros Productos </h2>
+<h2 className='offer'> Nuestros Productos </h2>
 
 <ItemList data={products} />
 </>
