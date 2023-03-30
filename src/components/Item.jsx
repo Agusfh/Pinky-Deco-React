@@ -13,7 +13,7 @@ const Item = ({id, nombre, precio, stock, foto}) => {
     <Card.Img variant="top" src={maceta} />
     <Card.Text>
     Id: {id} <br></br>
-    
+  
     </Card.Text>
     <Link className='buy' to={`/item/${id}`}>Detalle</Link>
   </Card.Body>

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './ItemListContainer.css';
 import ItemList from './ItemList';
-import data from "../data.json";
 import { useParams } from 'react-router-dom';
 import Carousel from 'react-bootstrap/Carousel';
 import banner1 from '../assets/banner1.png';
@@ -26,22 +25,20 @@ const ItemListContainer =  ({greeting}) => {
           where("categoria", "==", id));
           const response = await getDocs(itemCollection);
 
-      // y hacemos un map para crear objetos con esos datos.
+      // map para crear objetos con esos datos.
 
         const productos = response.docs.map((doc) => {
         const newProduct = {...doc.data(),id: doc.id};
 
       return newProduct;
             });
+      setProducts(productos);
 
         };
-
-        setProducts(products);
 
         getData(); 
       }, [id])
 
-    // codigo que arme antes de firebase
 
 return (
     <>
@@ -78,16 +75,6 @@ return (
 
 <h2> Nuestros Productos </h2> 
 
-    <div>
-      <h3>productos</h3>
-
-      {products.map((product) => (
-        <div key={product.id}>
-        <h4>{product.nombre}</h4>
-        <p>{product.precio}</p>
-        </div>
-      ))}
-    </div>
         <ItemList data={products}/>
     </>
 )}      

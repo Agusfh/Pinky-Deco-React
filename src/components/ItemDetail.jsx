@@ -5,7 +5,6 @@ import ItemCount from './ItemCount';
 import maceta from '../assets/maceta.png';
 import {useContext, userState, useEffect} from 'react';
 import {CartContexto} from '../context/CartContext';
-import {doc, getDoc, getFirestore} from "firebase/firestore";
 
 
 const ItemDetail = ({producto}) => {

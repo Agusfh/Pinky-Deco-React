@@ -27,28 +27,9 @@ const ItemDetailContainer = () => {
     });
   }, [id]);
 
-
-  // codigo que arme antes de firebase
-
-  const [producto, setProducto]= useState({})
-  
-  const getDatos = () => {
-    return new Promise((resolve,reject) => {
-        if(data.length === 0){ 
-            reject(new Error ("No hay datos"));}
-    
-        setTimeout(() => {
-            resolve(data)
-        }, 2000);
-    });
-};
-    useEffect(()=>{
-      getDatos()
-      .then((res)=> setProducto(res.find((item)=> item.id === parseInt(id))))
-    },[id])
   return (
     <>
-    <ItemDetail producto={producto}/>
+    <ItemDetail producto={products}/>
     </>
   )
 }
