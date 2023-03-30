@@ -3,8 +3,9 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import ItemCount from './ItemCount';
 import maceta from '../assets/maceta.png';
-import {useContext} from 'react';
+import {useContext, userState, useEffect} from 'react';
 import {CartContexto} from '../context/CartContext';
+import {doc, getDoc, getFirestore} from "firebase/firestore";
 
 
 const ItemDetail = ({producto}) => {

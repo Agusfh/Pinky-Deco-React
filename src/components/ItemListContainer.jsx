@@ -8,10 +8,26 @@ import banner1 from '../assets/banner1.png';
 import banner2 from '../assets/banner2.png';
 import banner3 from '../assets/banner3.png';
 import { Container } from 'react-bootstrap';
+import {collection, doc, getDocs, getFirestore} from "firebase/firestore";
 
-//*Traigo la información desde mi JSON de productos, los divido por categoria y los muestro en el ItemListContainer*//
+//*Traigo la información desde mi base de datos en firebase, y los muestro en el ItemListContainer*//
 
 const ItemListContainer =  ({greeting}) => {
+
+    const [products, setProducts] = useState([]);
+
+    useEffect(() => {
+      const db = getFirestore();
+
+      const itemCollection = collection(db, "decoracion");
+      getDocs(itemCollection).then((snapshot) => {
+        const docs = snapshot.docs.map ((doc) => doc.data(), doc.id);
+            setProducts(docs);
+      });
+
+    }, []);
+
+    // codigo que arme antes de firebase
 
     const [items, setItems]=useState([])
     const {id}=useParams()
@@ -41,6 +57,8 @@ const ItemListContainer =  ({greeting}) => {
     useEffect(()=>{
         fetchingData();
     },[id])
+
+
 
      //*Muestro el carousel solo en la página principal usando el window*//
 
@@ -78,6 +96,17 @@ return (
 </Container> }
 
 <h2> Nuestros Productos </h2> 
+
+    <div>
+      <h3>productos</h3>
+
+      {products.map((product) => (
+        <div key={product.id}>
+        <h4>{product.nombre}</h4>
+        <p>{product.precio}</p>
+        </div>
+      ))}
+    </div>
         <ItemList data={items}/>
     </>
 )}      

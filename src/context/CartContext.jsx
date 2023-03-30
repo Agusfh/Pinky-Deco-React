@@ -2,7 +2,7 @@ import {createContext, useState} from 'react'
 
 export const CartContexto = createContext(null);
 
-/* Dentro del CartContext creo la funcioón del carrito que voy a utulizar para poder añadir productos al cart, eliminar productos del cart y que se vean desde CartWidget */
+/* Dentro del CartContext creo la función del carrito que voy a utulizar para poder añadir productos al cart, eliminar productos del cart y que se vean desde CartWidget */
 
 const CartContext = ({children}) => {
 
