@@ -1,4 +1,5 @@
-import {createContext, useState} from 'react'
+import {createContext, useState, useEffect} from 'react'
+import {collection,getDocs,getFirestore} from "firebase/firestore";
 
 export const CartContexto = createContext(null);
 
@@ -28,6 +29,21 @@ const CartContext = ({children}) => {
   const shoppingCart = () => {
     return cart.reduce((acc, prod) => (acc += parseInt(prod.cantidad)), 0);
   };
+
+  const db = getFirestore();
+
+  useEffect(() => {
+    const itemsCollection = collection(db, "decoracion");
+    getDocs(itemsCollection).then((snapshot) => {
+      const docs = snapshot.docs.map((doc) => ({
+        ...doc.data(),
+        id: doc.id,
+      }));
+      setProducts(docs);
+    });
+  }, []);
+
+
 
   return (
     <CartContexto.Provider value={{

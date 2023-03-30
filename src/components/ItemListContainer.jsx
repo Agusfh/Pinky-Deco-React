@@ -15,52 +15,31 @@ import {collection, doc, getDocs, getFirestore} from "firebase/firestore";
 const ItemListContainer =  ({greeting}) => {
 
     const [products, setProducts] = useState([]);
-
+    const { id } = useParams()
+    
     useEffect(() => {
-      const db = getFirestore();
+      const db= getFirestore()
 
-      const itemCollection = collection(db, "decoracion");
-      getDocs(itemCollection).then((snapshot) => {
-        const docs = snapshot.docs.map ((doc) => doc.data(), doc.id);
-            setProducts(docs);
-      });
+          const getData = async () => {
+          
+          const itemCollection= !categoriaId? collection(db, "decoracion") : query(collection(db, "decoracion"),
+          where("categoria", "==", id));
+          const response = await getDocs(itemCollection);
 
-    }, []);
+      // y hacemos un map para crear objetos con esos datos.
+
+        const productos = response.docs.map((doc) => {
+        const newProduct = {...doc.data(),id: doc.id};
+
+      return newProduct;
+            });
+            
+        };
+// llamamos a la función
+        getData(); 
+      }, [id])
 
     // codigo que arme antes de firebase
-
-    const [items, setItems]=useState([])
-    const {id}=useParams()
-    const getDatos = () => {
-        return new Promise((resolve,reject) => {
-            if(data.length === 0){ 
-                reject(new Error ("No hay datos"));}
-        
-          resolve(data);
-        });
-    };
-
-    async function fetchingData() {
-        try {
-            const datosFetched = await getDatos();
-            if(id){
-                setItems(datosFetched.filter((item)=> item.categoria === id))
-            }else{
-                setItems(datosFetched)
-            }
-        }
-        catch (error) {
-            console.log(error);
-        }
-    }
-
-    useEffect(()=>{
-        fetchingData();
-    },[id])
-
-
-
-     //*Muestro el carousel solo en la página principal usando el window*//
 
 return (
     <>
@@ -107,7 +86,7 @@ return (
         </div>
       ))}
     </div>
-        <ItemList data={items}/>
+        <ItemList data={data}/>
     </>
 )}      
     
