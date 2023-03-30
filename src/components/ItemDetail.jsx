@@ -22,8 +22,7 @@ const ItemDetail = ({producto}) => {
       <h1>{nombre}</h1>
       <Card.Img variant="top" src={maceta} />
       <Card.Text>
-      Id: {id} <br></br>
-      Precio: {precio} <br></br>
+      Precio: $ {precio} <br></br>
       stock: {stock} <br></br>
       </Card.Text>
       <ItemCount stock={stock}onAdd={onAdd}/>
