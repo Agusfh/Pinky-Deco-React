@@ -20,7 +20,8 @@ const Form = () => {
 
     const order = {
         nombre,
-        email
+        email,
+       
     }
 
     const orderCollection = collection(db, "orden");

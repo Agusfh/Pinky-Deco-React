@@ -36,8 +36,8 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.borra btn-primary{
-    background-color: none !important;
+.borra{
+    background-color: pink !important;
     padding: 10px;
     border: none !important;
 }
