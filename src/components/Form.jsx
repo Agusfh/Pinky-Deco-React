@@ -1,6 +1,7 @@
 import { collection,addDoc,getFirestore} from 'firebase/firestore'
 import React from 'react'
 import { useState } from 'react'
+import './Form.css'
 
 
 const Form = () => {
@@ -26,7 +27,9 @@ const Form = () => {
 
 
 return (
-    <div>
+    <div className='formulario'>
+
+        <h2 className='checkout'>Confirmación de compra</h2>
 
     <form onSubmit={handleSubmit}> 
 
@@ -42,13 +45,13 @@ return (
         onChange = {(e) => setEmail(e.target.value)}
         ></input>
 
-        <button type='submit'>Confirmar compra</button>
+        <button className='comprar' type='submit'>Confirmar compra</button>
     </form>
 
-    <p>Nro de pedido: {orderId}</p>
+    <p className='pedidoid'>Nro de pedido: {orderId}</p>
 
     </div>
-  )
+    )
 }
 
-export default Form
+export default Form;
