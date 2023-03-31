@@ -24,6 +24,10 @@ https://pinkydeco.netlify.app/
 
 "react-router-dom": "^6.8.2"
 
+"react-toastify": "^9.1.2",
+
+"sweetalert": "^2.1.2"
+
 ## Vista del Proyecto
 
 
