@@ -1,6 +1,5 @@
 import React from 'react'
 import { useState } from 'react';
-import Data from "../data.json";
 import Button from 'react-bootstrap/Button';
 import "./Item.css";
 
