@@ -9,10 +9,10 @@ const CartWidget = ({}) => {
   const { cart, shoppingCart} = useContext(CartContexto);
   return (
     <div className='carrito'>
-        <span class="material-symbols-outlined" as={NavLink} to='/Cart'>
+        <span className="material-symbols-outlined" as={NavLink} to='/Cart'>
         shopping_cart
-        </span>
-        <span>{shoppingCart()}</span>
+        </span> 
+        <span className='number'>{shoppingCart()}</span>
     </div>
   );
 };

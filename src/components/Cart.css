@@ -1,0 +1,43 @@
+.back{
+    background-color: palevioletred !important;
+    padding: 10px;
+    border: white !important;
+    margin: 20px;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center;
+}
+
+.back:hover{
+    background-color: #da4a7a;
+    color: white;
+}
+
+.empty{
+    text-align: center;
+    padding: 30px;
+    margin: 60px;
+    
+}
+
+.tabla{
+    margin: 15px;
+    padding: 15px;
+    text-align: center;
+}
+
+.total{
+    text-align: center;
+    padding: 30px;
+    margin: 60px;
+    color: #da4a7a;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.borra btn-primary{
+    background-color: none !important;
+    padding: 10px;
+    border: none !important;
+}

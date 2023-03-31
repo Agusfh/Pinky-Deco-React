@@ -5,7 +5,9 @@ import Item from './Item';
 import { Link } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 import Table from 'react-bootstrap/Table';
+import "./Cart.css";
 import { Container } from 'react-bootstrap';
+import Form from './Form';
 
 
 const Cart = () => {
@@ -15,9 +17,9 @@ const Cart = () => {
     return (
       <>
         <div className="cart_">
-          <h2>El carrito esta vacio..</h2>
+          <h2 className='empty'>El carrito esta vacio..</h2>
           <Link to={"/"}>
-            <Button >Volver a Home</Button> 
+            <Button className='back'>Volver a Home</Button> 
           </Link>
         </div>
       </>
@@ -32,6 +34,7 @@ const Cart = () => {
      {cart.map((compra) => (
     <div key={compra.id}>
 
+<Container className='tabla'>
 <Table striped bordered hover size="sm">
       <thead>
         <tr>
@@ -47,16 +50,22 @@ const Cart = () => {
           <td>{compra.nombre}</td>
           <td>{compra.precio}</td>
           <td>{compra.cantidad}</td>
-          <td><Button onClick={() => removeItem(compra.id)}> 🗑️ </Button></td>
+          <td><Button  className='borra' onClick={() => removeItem(compra.id)}> 🗑️ </Button></td>
         </tr>
       </tbody>
     </Table>
 
+</Container>
+
     </div>
     
   ))}
-  <span>Total a pagar : ${cartTotal()}</span>
+  <span className='total'>Total a pagar : ${cartTotal()}</span>
+
+  <Form/>
+
     </div>
+    
   );
 };
 
