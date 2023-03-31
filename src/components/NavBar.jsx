@@ -43,7 +43,7 @@ function NavBar() {
         </Navbar.Collapse>
       </Container>
       <div id='carro' className='carro'>
-      <NavLink to='/cart'> <CartWidget/> </NavLink>
+      <NavLink to='/cart' style={{textDecoration:'none'}}> <CartWidget/> </NavLink>
       
       </div>
     </Navbar>
