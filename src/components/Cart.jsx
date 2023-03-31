@@ -1,7 +1,6 @@
 import React from 'react'
 import { useContext } from "react";
 import { CartContexto } from '../context/CartContext';
-import Item from './Item';
 import { Link } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 import Table from 'react-bootstrap/Table';
