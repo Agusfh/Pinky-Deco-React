@@ -31,3 +31,4 @@ https://pinkydeco.netlify.app/
 ## Vista del Proyecto
 
 
+[Proyecto-PinkyDeco.webm](https://user-images.githubusercontent.com/107061498/229148533-1f830097-1c2b-4591-ad58-ea93dfb51412.webm)
