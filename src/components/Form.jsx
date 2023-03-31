@@ -21,7 +21,7 @@ const Form = () => {
     const order = {
         nombre,
         email,
-       
+        Items: cart.map ({id: producto.id, nombre: producto.nombre, precio: producto.precio})
     }
 
     const orderCollection = collection(db, "orden");
